@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="css/custom.css">
 
   <!-- Code syntax highlighting -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -102,52 +103,24 @@
       <section>
         <h1>Creando nuestra primera página AMP</h1>
       </section>
-      <section>
-        <!-- @todo meter imagen mejor -->
-        <pre>
-          <code data-noescape data-trim>
-            &lt;!doctype html&gt;
-            &lt;html amp lang=&quot;en&quot;&gt;
-            &lt;head&gt;
-            &lt;meta charset=&quot;utf-8&quot;&gt;
-            &lt;title&gt;Hello, AMPs&lt;/title&gt;
-            &lt;link rel=&quot;canonical&quot; href=&quot;http://example.ampproject.org/article-metadata.html&quot; /&gt;
-            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,minimum-scale=1,initial-scale=1&quot;&gt;
-            &lt;script type=&quot;application/ld+json&quot;&gt;
-            {
-            &quot;@context&quot;: &quot;http://schema.org&quot;,
-            &quot;@type&quot;: &quot;NewsArticle&quot;,
-            &quot;headline&quot;: &quot;Open-source framework for publishing content&quot;,
-            &quot;datePublished&quot;: &quot;2015-10-07T12:02:41Z&quot;,
-            &quot;image&quot;: [
-            &quot;logo.jpg&quot;
-            ]
-            }
-            &lt;/script&gt;
-            &lt;style amp-boilerplate&gt;/* Style AMP-Boilerplate */&lt;/style&gt;
-            &lt;noscript&gt;&lt;style amp-boilerplate&gt;/* Style AMP-Boilerplate */&lt;/style&gt;&lt;/noscript&gt;
-            &lt;script async src=&quot;https://cdn.ampproject.org/v0.js&quot;&gt;&lt;/script&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-            &lt;h1&gt;Welcome to the mobile web&lt;/h1&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
-          </code>
-        </pre>
-        <aside class="note"></aside>
+      <section data-background="img/simple-amp.jpg" data-background-size="100%" data-background-position="center">
+        <aside class="notes">
+          Comentar por encima los elementos y requerimientos
+        </aside>
       </section>
       <section>
         <h1>Componentes AMP</h1>
+        <!-- @todo buscar imagen -->
       </section>
       <section>
         <h2>Incluyendo una imagen</h2>
         <p>Antes:</p>
         <pre>
-          <code><img src="smiley.gif" alt="Smiley face" height="42" width="42"></code>
+          <code align="center"><img src="homer.jpg" alt="Homer" height="400" width="800"></code>
         </pre>
         <p>Componente AMP:</p>
         <pre>
-          <code><amp-img src="welcome.jpg" alt="Welcome" height="400" width="800"></amp-img></code>
+          <code align="center"><amp-img src="homer.jpg" alt="Homer" height="400" width="800"></amp-img></code>
         </pre>
         <aside class="notes">
           La mayoría de las etiquetas HTML se pueden usar directamente en AMP HTML, pero ciertas etiquetas como la etiqueta <img> son reemplazadas por sus equivalentes como componentes AMP que se encargan de mejorar el rendimiento.
@@ -158,12 +131,9 @@
         <h2>Publicidad</h2>
         <!-- @todo ejemplo publi actual -->
         <pre>
-          <code><amp-ad width=300 height=250
-                           type="a9"
-                           data-aax_size="300x250"
-                           data-aax_pubname="test123"
-                           data-aax_src="302">
-          </amp-ad></code>
+          <code><amp-ad width=320 height=50
+                        type="doubleclick"
+                        data-slot="/1234/mobile_ad_banner"></amp-ad></code>
         </pre>
         <p>AdSense, DoubleClick o Smart AdServer ya están en la <a href="https://www.ampproject.org/docs/reference/amp-ad.html#supported-ad-networks" target="_blank">lista de servicios compatibles</a>.</p>
         <aside class="notes">
