@@ -127,21 +127,36 @@
           Otras etiquetas no permitidas son: iframe, form, input elements, etc →  (https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md#html-tags )
         </aside>
       </section>
+      <section data-background="img/doubleclick-desktop.jpg" data-background-size="100%">
+        <h1 align="right" style="margin-top: -33%">Publicidad</h1>
+      </section>
       <section>
         <h2>Publicidad</h2>
-        <!-- @todo ejemplo publi actual -->
-        <pre>
-          <code><amp-ad width=320 height=50
-                        type="doubleclick"
-                        data-slot="/1234/mobile_ad_banner"></amp-ad></code>
-        </pre>
+        <img data-src="img/doubleclick-amp.jpg">
         <p>AdSense, DoubleClick o Smart AdServer ya están en la <a href="https://www.ampproject.org/docs/reference/amp-ad.html#supported-ad-networks" target="_blank">lista de servicios compatibles</a>.</p>
         <aside class="notes">
+          <amp-ad width=320 height=50
+                  type="doubleclick"
+                  data-slot="/1234/mobile_ad_banner">
           Servicios soportadas actualmente: A9, Adform, AdReactor, AdSense, AdTech, Criteo, Dot and Media, DoubleClick, Flite, plista, Smart AdServer, Yieldmo, Revcontent, TripleLift, Teads, I-Mobile
         </aside>
       </section>
       <section>
-        <h2>Componentes extendidos: youtube</h2>
+        <h2>Componentes extendidos</h2>
+        <p>Cada componente tiene sus propios atributos y requieren de un script adicional.</p>
+        <ul>
+          <li>amp-youtube</li>
+          <li>amp-analytics</li>
+          <li>amp-audio</li>
+          <li>amp-carousel</li>
+          <li>amp-facebook</li>
+          <li>amp-iframe</li>
+          <li>amp-lightbox</li>
+          <li><a href="https://www.ampproject.org/docs/reference/extended.html" target="_blank">etc</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Youtube</h2>
         <p>Antes:</p>
         <pre>
           <code><iframe width="560" height="315" src="https://www.youtube.com/embed/bAMzIihPjAg" frameborder="0" allowfullscreen></iframe></code>
@@ -156,7 +171,7 @@
         </pre>
       </section>
       <section>
-        <h2>Componentes extendidos: analytics</h2>
+        <h2>Analytics</h2>
         <!-- @todo poner ejemplo antes -->
         <p>Antes:</p>
         <pre>
@@ -188,19 +203,7 @@
         </pre>
         <!-- @todo lista de servicios soportados -->
       </section>
-      <section>
-        <h2>Otros Componentes</h2>
-        <p>Cada componente tiene sus propios atributos. Otros componentes ya estables:</p>
-        <ul>
-          <li>amp-audio</li>
-          <li>amp-carousel</li>
-          <li>amp-dailymotion</li>
-          <li>amp-facebook</li>
-          <li>amp-iframe</li>
-          <li>amp-lightbox</li>
-          <li><a href="https://www.ampproject.org/docs/reference/extended.html" target="_blank">etc</a></li>
-        </ul>
-      </section>
+
       <section>
         <h1>Cambiando la presentación</h1>
         <!-- @todo añadir imagen o gif chulo -->
