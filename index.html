@@ -103,42 +103,208 @@
         <h1>Creando nuestra primera página AMP</h1>
       </section>
       <section>
-        <h1>Incluye una imagen</h1>
+        <!-- @todo meter imagen mejor -->
+        <pre>
+          <code data-noescape data-trim>
+            &lt;!doctype html&gt;
+            &lt;html amp lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;title&gt;Hello, AMPs&lt;/title&gt;
+            &lt;link rel=&quot;canonical&quot; href=&quot;http://example.ampproject.org/article-metadata.html&quot; /&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,minimum-scale=1,initial-scale=1&quot;&gt;
+            &lt;script type=&quot;application/ld+json&quot;&gt;
+            {
+            &quot;@context&quot;: &quot;http://schema.org&quot;,
+            &quot;@type&quot;: &quot;NewsArticle&quot;,
+            &quot;headline&quot;: &quot;Open-source framework for publishing content&quot;,
+            &quot;datePublished&quot;: &quot;2015-10-07T12:02:41Z&quot;,
+            &quot;image&quot;: [
+            &quot;logo.jpg&quot;
+            ]
+            }
+            &lt;/script&gt;
+            &lt;style amp-boilerplate&gt;/* Style AMP-Boilerplate */&lt;/style&gt;
+            &lt;noscript&gt;&lt;style amp-boilerplate&gt;/* Style AMP-Boilerplate */&lt;/style&gt;&lt;/noscript&gt;
+            &lt;script async src=&quot;https://cdn.ampproject.org/v0.js&quot;&gt;&lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;h1&gt;Welcome to the mobile web&lt;/h1&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+        <aside class="note"></aside>
       </section>
       <section>
-        <h1>Otros Componentes (1)</h1>
+        <h1>Componentes AMP</h1>
       </section>
       <section>
-        <h1>Otros Componentes (2)</h1>
+        <h2>Incluyendo una imagen</h2>
+        <p>Antes:</p>
+        <pre>
+          <code><img src="smiley.gif" alt="Smiley face" height="42" width="42"></code>
+        </pre>
+        <p>Componente AMP:</p>
+        <pre>
+          <code><amp-img src="welcome.jpg" alt="Welcome" height="400" width="800"></amp-img></code>
+        </pre>
+        <aside class="notes">
+          La mayoría de las etiquetas HTML se pueden usar directamente en AMP HTML, pero ciertas etiquetas como la etiqueta <img> son reemplazadas por sus equivalentes como componentes AMP que se encargan de mejorar el rendimiento.
+          Otras etiquetas no permitidas son: iframe, form, input elements, etc →  (https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md#html-tags )
+        </aside>
       </section>
       <section>
-        <h1>Cambiano la presentación y el layout</h1>
+        <h2>Publicidad</h2>
+        <!-- @todo ejemplo publi actual -->
+        <pre>
+          <code><amp-ad width=300 height=250
+                           type="a9"
+                           data-aax_size="300x250"
+                           data-aax_pubname="test123"
+                           data-aax_src="302">
+          </amp-ad></code>
+        </pre>
+        <p>AdSense, DoubleClick o Smart AdServer ya están en la <a href="https://www.ampproject.org/docs/reference/amp-ad.html#supported-ad-networks" target="_blank">lista de servicios compatibles</a>.</p>
+        <aside class="notes">
+          Servicios soportadas actualmente: A9, Adform, AdReactor, AdSense, AdTech, Criteo, Dot and Media, DoubleClick, Flite, plista, Smart AdServer, Yieldmo, Revcontent, TripleLift, Teads, I-Mobile
+        </aside>
+      </section>
+      <section>
+        <h2>Componentes extendidos: youtube</h2>
+        <p>Antes:</p>
+        <pre>
+          <code><iframe width="560" height="315" src="https://www.youtube.com/embed/bAMzIihPjAg" frameborder="0" allowfullscreen></iframe></code>
+        </pre>
+        <p>Componente AMP:</p>
+        <!-- @todo poner script de componente extendido -->
+        <pre>
+          <code><amp-youtube
+              data-videoid="bAMzIihPjAg"
+              layout="responsive"
+              width="480" height="270"></amp-youtube></code>
+        </pre>
+      </section>
+      <section>
+        <h2>Componentes extendidos: analytics</h2>
+        <!-- @todo poner ejemplo antes -->
+        <p>Antes:</p>
+        <pre>
+          <code><iframe width="560" height="315" src="https://www.youtube.com/embed/bAMzIihPjAg" frameborder="0" allowfullscreen></iframe></code>
+        </pre>
+        <p>Componente AMP:</p>
+        <!-- @todo poner script de componente extendido -->
+        <pre>
+          <code><amp-analytics type="atinternet" id="atinternet">
+            <script type="application/json">
+              {
+                "vars": {
+                  "site": "<?= $xiti['site']; ?>",
+                  "log": "<?= $xiti['log']; ?>",
+                  "domain": "<?= $xiti['domain']; ?>",
+                  "title": "<?= $xiti['title']; ?>",
+                  "level2": "<?= $xiti['level2']; ?>"
+                },
+                "triggers": {
+                  "defaultPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                  }
+                }
+              }
+            </script>
+          </amp-analytics>
+          </code>
+        </pre>
+        <!-- @todo lista de servicios soportados -->
+      </section>
+      <section>
+        <h2>Otros Componentes</h2>
+        <p>Cada componente tiene sus propios atributos. Otros componentes ya estables:</p>
+        <ul>
+          <li>amp-audio</li>
+          <li>amp-carousel</li>
+          <li>amp-dailymotion</li>
+          <li>amp-facebook</li>
+          <li>amp-iframe</li>
+          <li>amp-lightbox</li>
+          <li><a href="https://www.ampproject.org/docs/reference/extended.html" target="_blank">etc</a></li>
+        </ul>
       </section>
       <section>
         <h1>Cambiando la presentación</h1>
+        <!-- @todo añadir imagen o gif chulo -->
       </section>
       <section>
-        <h1>Cambiando el layout</h1>
+        <h2>Cambiando la presentación</h2>
+        <!-- @todo no se ve el code je -->
+        <ul>
+          <li>Para añadir estilos usaremos una única etiqueta <code><style amp-custom></style></code> dentro de la etiqueta <code><head></code></li>
+          <li>Algunos estilos, transiciones y animaciones no están permitidos (poner ejemplos)</li>
+          <li>Excepción con las fuentes custom</li>
+          <li>Límite de tamaño de 50 kilobytes</li>
+          <li>Valida tu CSS</li>
+        </ul>
+        <aside class="notes">
+          Hablar que śolo una única etiqueta style, y no se pueden meter styles como atributos html
+        </aside>
       </section>
       <section>
-        <h1>Previsualización y validación</h1>
+        <h2>Previsualización</h2>
+        <p>Como cualquier HTML podemos abrirlo directamente con el navegador.</p>
+        <!-- @todo poner imagen -->
       </section>
       <section>
-        <h1>Prepara tu página para su distribución</h1>
+        <h2>Validación</h2>
+        <p>Añadiendo #development=1</p>
+        <p>http://localhost:8000/released.amp.html#development=1</p>
+        <!-- @todo añadir imagen con captura del navegador -->
+        <aside class="notes">Ver otros navegadores</aside>
+      </section>
+      <section>
+        <h2>Validación</h2>
+        <p>También puedes forzar la búsqueda AMP emulando el navegador de Chrome con este enlace <a href="https://g.co/ampdemo" target="_blank">https://g.co/ampdemo</a></p>
+      </section>
+      <section>
+        <h2>Prepara tu página para su distribución</h2>
+        <p>Relacionamos la versión normal con la versión AMP</p>
+        <pre><code><link rel="amphtml" href="https://www.example.com/url/to/amp/document.html"></code></pre>
+        <p>Relacionamos la versión AMP con la versión básica</p>
+        <pre><code><link rel="canonical" href="https://www.example.com/url/to/full/document.html"></code></pre>
+        <p>Si sólo tienes versión AMP</p>
+        <pre><code><link rel="canonical" href="https://www.example.com/url/to/amp/document.html"></code></pre>
       </section>
       <section>
         <h1>Microformatos: Schema.org</h1>
+      </section>
+      <section>
+        <!-- @todo poner captura de ejemplo y comentar por encima -->
+        <!-- @todo poner enlace de validación -->
       </section>
     </section>
     <section>
       <section>
         <h1>¿Y ahora qué? Drupal y AMP</h1>
+        <!-- @todo poner imagen logo drupal y logo amp -->
+      </section>
+      <section>
+        <h2>Drupal y AMP</h2>
+        <!-- @todo meter logo lullabot -->
+        <ul>
+          <li>El módulo AMP: <a href="https://www.drupal.org/project/amp" target="_blank">https://www.drupal.org/project/amp</a></li>
+          <li>El theme AMP: <a href="https://www.drupal.org/project/amptheme" target="_blank">https://www.drupal.org/project/amptheme</a></li>
+          <li>La librería AMP: <a href="https://github.com/Lullabot/amp-library" target="_blank">https://github.com/Lullabot/amp-library</a></li>
+        </ul>
+        <aside class="notes">
+          La funcionalidad de las versiones de D7 y D8 son iguales.
+          Desde finales del 2015, Lullabot está trabajando en el desarrollo de la integración de AMP con Drupal, hace poco empezaron a salir las primeras versiones beta.
+        </aside>
       </section>
       <section>
         <h1>Cómo funcionan los proyectos AMP en Drupal 7</h1>
-      </section>
-      <section>
-        <h1>Cómo funcionan los proyectos AMP en Drupal 8</h1>
+        <aside class="notes">
+          Comentar diferencias sustanciales con D8 si las hay
+        </aside>
       </section>
       <section>
         <h1>Custom vs Contrib</h1>
