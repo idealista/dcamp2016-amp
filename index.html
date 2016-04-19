@@ -343,14 +343,85 @@
         </aside>
       </section>
       <section>
-        <h1>Cómo funcionan los proyectos AMP en Drupal 7</h1>
+        <h2>Cómo funcionan los proyectos AMP en Drupal 7</h2>
+        <ul>
+          <li>PHP 5.5+</li>
+          <li>Lullabot AMP Library</li>
+          <li>composer_manager, amptheme, amp</li>
+          <li>beta</li>
+        </ul>
         <aside class="notes">
+          Falla
+          <ul>
+            <li>composer_manager necesita un parche en D8</li>
+            <li>is_amp_request falla en D7</li>
+            <li>El modo debugger de momento no funciona bien</li>
+            <li>La librería no elimina todas las etiquetas prohibidas por AMP</li>
+          </ul>
           Comentar diferencias sustanciales con D8 si las hay
         </aside>
       </section>
       <section>
-        <h1>Custom vs Contrib</h1>
+        <h2>Demo</h2>
+        <a href="http://local.drupalbirras/" target="_blank">Demo</a>
+        <!-- @todo poner imagen o gif -->
       </section>
+      <section>
+        <h1>Esquema</h1>
+        <!-- @todo hacer esquema de flujo de trabajo -->
+      </section>
+      <section>
+        <h1>Contrib vs Custom</h1>
+      </section>
+      <section>
+        <h3>A favor de Contrib</h3>
+        <ul>
+          <li>Hay una gran empresa detrás: Lullabot</li>
+          <li>La idea es muy buena:
+            <ul>
+              <li>Módulo sencillo de entender</li>
+              <li>AMP View mode</li>
+              <li>AMP Field Formatters</li>
+              <li>AMP Theme</li>
+              <li>Librería: Convierte y valida AMP HTML</li>
+              <li>Proporciona Bloques</li>
+              <li>Fácil de configurar</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>A favor de Custom</h3>
+        <ul>
+          <li>Contrib todavía no funciona bien del todo</li>
+          <li>PHP 5.3+</li>
+          <li>Para sacarle el máximo jugo a AMP necesitas código custom
+          <ul>
+            <li>Soporte para otros componentes AMP</li>
+            <li>Expiración de cachés de contenidos</li>
+            <li>¿Varnish? Anonimiza las peticiones AMP</li>
+            <li>¿Context? Desactiva bloques definiendo tus condiciones</li>
+            <li>Schema.org, necesario para Top Stories</li>
+          </ul></li>
+          <p>¡Aprovecha y contribuye!</p>
+        </ul>
+      </section>
+      <!-- section>
+        <h1>Custom, te eligo a ti</h1>
+      </section>
+      <section>
+        <h3>Funcionalidad recomandable</h3>
+        <ul>
+          <li>Saber cuando una petición es AMP</li>
+          <li>Utilizar un nuevo theme para AMP</li>
+          <li>View mode para AMP</li>
+          <li>Criterios para que tu contenido tenga versión AMP</li>
+          <li>Formatters</li>
+          <li>Quitar bloques innecesarios</li>
+          <li>Comando drush para generar versiones AMP</li>
+          <li>Implementación custom de componentes</li>
+        </ul>
+      </section -->
     </section>
     <section>
       <h2>Enlaces de interés</h2>
