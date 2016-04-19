@@ -71,21 +71,73 @@
         <h1 style="text-align: left; color: wheat;">¿Qué es AMP?</h1>
       </section>
       <section>
-        <h1>¿Quién lo usa?</h1>
+        <img src="img/mobilefirst.jpg"/>
       </section>
       <section>
-        <h1>Preguntas y respuestas rápidas</h1>
+        <h2>Cuando una página no carga,</br>
+            los editores pierden lectores</br>
+            y oportunidades de ingresos</h2>
+        <img src="img/mobileslow.jpg"/>
+      </section>
+      <section data-background="img/dni.png">
+      </section>
+      <section data-background-color="#607D8B">
+        <div style="float:left; width: 70%;">
+          <p style="color:#ffffff"><strong style="background: #b62682;">
+            Accelerated Mobile Pages</strong> ( AMP )<br>
+                                              es un proyecto open source<br>
+                                              que pretende ayudar a los editores a crear<br>
+            <strong style="background: #b62682;">contenido optimizado para móviles</strong><br>
+                                              y que pueda ser<br>
+            <strong style="background: #b62682;">cargado instantáneamente</strong><br> en todas partes.</p>
+        </div>
+        <img src="img/google-amp.png" style="box-shadow: none; border: none;"/>
+      </section>
+      <section>
+        <ul>
+          <li>¿Necesito poner sí o sí una versión AMP?</li>
+          <li>¿Sustituye a mi sitio normal?</li>
+          <li>¿Puedo poner mi propio css y javascript?</li>
+          <li>¿Qué pasa con los vídeos?</li>
+          <li>¿Y con la publicidad?</li>
+          <li>¿Y la analítica web?</li>
+          <li>...........</li>
+        </ul>
       </section>
     </section>
     <section>
       <section>
-        <h1>Conociendo un poco más AMP HTML</h1>
+        <h1>AMP HTML</h1>
+        <p>Es HTML extendido con componentes AMP.<br>
+           Algunas etiquetas HTML se sustituyen por su equivalente AMP<br>
+           Por ejemplo img pasa a ser amp-img</p>
+<pre><code data-trim data-noescape>
+  <!doctype html>
+  &lt;html &#9889;&gt;
+  &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;link rel=&quot;canonical&quot; href=&quot;hello-world.html&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,minimum-scale=1,initial-scale=1&quot;&gt;
+  &lt;style amp-boilerplate&gt;body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}&lt;/style&gt;&lt;noscript&gt;&lt;style amp-boilerplate&gt;body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}&lt;/style&gt;&lt;/noscript&gt;
+  &lt;script async src=&quot;https://cdn.ampproject.org/v0.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;Hello World!&lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+
       </section>
       <section>
-        <h1>¿Qué es AMP JS?</h1>
+        <h1>AMP JS</h1>
+        Librería que implementa las recomentaciones de rendimiento de AMP.
+        <ul>
+          <li>Proporciona las etiquetas personalizadas (componentes AMP)</li>
+          <li>Carga asíncrona de recursos externos para que nada bloquee la página durante el renderizado.</li>
+          <li>Precalculado del layout de cada elemento antes de que los recursos se carguen.</li>
+        </ul>
       </section>
       <section>
-        <h1>¿Qué es Google AMP Cache?</h1>
+        <h1>Google AMP Cache</h1>
+        "We intend to open our cache servers to be used by anyone free of charge."
       </section>
     </section>
     <section>
