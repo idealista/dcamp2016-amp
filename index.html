@@ -125,6 +125,7 @@
         <h1>Creando nuestra primera página AMP</h1>
       </section>
       <section data-background="img/simple-amp.jpg" data-background-size="100%" data-background-position="center">
+        <h2 align="right" style="margin-top: -25%">AMP HTML</h2>
         <aside class="notes">
           Comentar por encima los elementos y requerimientos
         </aside>
@@ -190,14 +191,12 @@
       </section>
       <section>
         <h2>Analytics</h2>
-        <!-- @todo poner ejemplo antes -->
         <p>Antes:</p>
-        <pre>
-          <code><iframe width="560" height="315" src="https://www.youtube.com/embed/bAMzIihPjAg" frameborder="0" allowfullscreen></iframe></code>
-        </pre>
+        <img data-src="img/xiti-desktop.png" />
       </section>
       <section>
-        <img data-src="img/xiti-amp.jpg" width="600"/>
+        <h3>Analytics</h3>
+        <img data-src="img/xiti-amp.jpg" width="550"/>
         <p>AT Internet, Chartbeat, comScore,  o Google Analytics ya están en la <a href="https://www.ampproject.org/docs/reference/extended/amp-analytics.html#analytics-vendors" target="_blank">lista de servicios compatibles</a>.</p>
       </section>
       <section>
@@ -206,33 +205,47 @@
       </section>
       <section>
         <h2>Cambiando la presentación</h2>
-        <!-- @todo no se ve el code je -->
         <ul>
-          <li>Para añadir estilos usaremos una única etiqueta <code><style amp-custom></style></code> dentro de la etiqueta <code><head></code></li>
-          <li>Algunos estilos, transiciones y animaciones no están permitidos (poner ejemplos)</li>
+          <li>Usaremos una única etiqueta <code>&lt;style amp-custom&gt;</code> dentro de la etiqueta <code>&lt;head&gt;</code></li>
+          <li><a href="https://www.ampproject.org/docs/guides/responsive/style_pages.html#disallowed-styles" target="_blank">Algunos estilos</a>, <a href="https://www.ampproject.org/docs/guides/responsive/style_pages.html#white-listed-transition-and-animation-properties" target="_blank">transiciones y animaciones</a> no están permitidos, como:
+            <ul>
+              <li>!important</li>
+              <li>filter</li>
+              <li>selectores universales: *, :not()</li>
+            </ul>
+          </li>
           <li>Excepción con las fuentes custom</li>
           <li>Límite de tamaño de 50 kilobytes</li>
           <li>Valida tu CSS</li>
         </ul>
         <aside class="notes">
           Hablar que śolo una única etiqueta style, y no se pueden meter styles como atributos html
+          <code><style amp-custom></style></code>
+          <code><head></head></code>
         </aside>
       </section>
+      <!--<section data-background="img/example-browser.png" data-background-size="30%" data-background-position="right">-->
       <section>
+        <div style="float:left; width: 50%; margin-top: 20%;">
         <h2>Previsualización</h2>
         <p>Como cualquier HTML podemos abrirlo directamente con el navegador.</p>
-        <!-- @todo poner imagen -->
+        </div>
+        <img data-src="img/example-browser.png" align="right" width="330" style="margin-right: 5%; margin-top: 0%;" />
       </section>
       <section>
         <h2>Validación</h2>
         <p>Añadiendo #development=1</p>
         <p>http://localhost:8000/released.amp.html#development=1</p>
-        <!-- @todo añadir imagen con captura del navegador -->
+        <!-- @todo añadir imagen con captura del navegador erróneo -->
+        <img style="margin-left: 5%;" align="left" data-src="img/success-validation.png" />
+        <img style="margin-right: 5%;" align="right" data-src="img/success-validation.png" />
         <aside class="notes">Ver otros navegadores</aside>
       </section>
       <section>
         <h2>Validación</h2>
-        <p>También puedes forzar la búsqueda AMP emulando el navegador de Chrome a través de <a href="https://g.co/ampdemo" target="_blank">https://g.co/ampdemo</a></p>
+        <p>También puedes emular un dispositivo móvil desde Chrome y abrir <a href="https://g.co/ampdemo" target="_blank">https://g.co/ampdemo</a></p>
+        <img style="margin-left: 5%;" align="left" data-src="img/browser-force-amp-search.png" />
+        <img style="margin-right: 5%;" align="right" data-src="img/browser-force-amp-search-1.png" />
       </section>
       <section>
         <h2>Prepara tu página AMP para su distribución</h2>
@@ -244,13 +257,19 @@
         <pre><code><link rel="canonical" href="https://www.example.com/url/to/amp/document.html"></code></pre>
       </section>
       <section>
-        <h1>Microformatos: Schema.org</h1>
-        <!-- @todo poner imagen de top stores -->
+        <h1 style="line-height: 100%;">Microformatos: Schema.org</h1>
+        <img data-src="img/top-stories-3.jpg" width="600" />
       </section>
       <section>
         <img data-src="img/schemaorg-amp.jpg" width="1024"/>
-        <!-- @todo poner captura de ejemplo y comentar por encima -->
-        <!-- @todo poner enlace de validación -->
+        <aside class="notes">
+          Comentar
+        </aside>
+      </section>
+      <section>
+        <h2>Validación de Schema.org</h2>
+        <p><a href="https://developers.google.com/structured-data/testing-tool" target="_blank">https://developers.google.com/structured-data/testing-tool</a></p>
+        <img data-src="img/schemaorg-validator.png" width="600"/>
       </section>
     </section>
     <section>
