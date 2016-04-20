@@ -370,7 +370,7 @@
         <h1>Contrib vs Custom</h1>
       </section>
       <section>
-        <h3>A favor de Contrib</h3>
+        <h3>Contrib</h3>
         <ul>
           <li>Hay una gran empresa detrás: Lullabot</li>
           <li>La idea es muy buena:
@@ -387,18 +387,23 @@
         </ul>
       </section>
       <section>
-        <h3>A favor de Custom</h3>
+        <h3>Custom</h3>
         <ul>
           <li>Contrib todavía no funciona bien del todo</li>
           <li>PHP 5.3+</li>
-          <li>Para sacarle el máximo jugo a AMP necesitas código custom
-          <ul>
-            <li>Soporte para otros componentes AMP</li>
-            <li>Expiración de cachés de contenidos</li>
-            <li>¿Varnish? Anonimiza las peticiones AMP</li>
-            <li>¿Context? Desactiva bloques definiendo tus condiciones</li>
-            <li>Schema.org, necesario para Top Stories</li>
-          </ul></li>
+          <li>Ampliando el contrib
+            <ul>
+              <li>Soporte para otros componentes AMP</li>
+              <li>Schema.org, necesario para Top Stories</li>
+              <li>¿Context? Desactiva bloques definiendo tus condiciones</li>
+              <li>Varnish + Expire</li>
+            </ul>
+          </li>
+          <pre><code>if (req.url  ~ "^/(.*)[?|&]amp(.*)") {
+  unset req.http.Cookie;
+}
+...
+set beresp.ttl = 2w;</code></pre>
           <p>¡Aprovecha y contribuye!</p>
         </ul>
       </section>
