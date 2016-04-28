@@ -1,6 +1,6 @@
 # Activando tu AMP versión. Qué necesitas saber
 
-- [http://idealista-tech.github.io/dcamp2016-amp/#/](http://idealista-tech.github.io/dcamp2016-amp/#/)
+- Link a la presentación [http://idealista-tech.github.io/dcamp2016-amp/#/](http://idealista-tech.github.io/dcamp2016-amp/#/)
 
 En 2016 ha llegado el Accelerated Mobile Pages (AMP) de la mano de Google para dar respuesta a las necesidades de rendimiento a la hora de visualizar webs desde un terminal móvil.
 
